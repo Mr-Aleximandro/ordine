@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.pantallas.CrearCuentaActivity"
+    android:background="@color/fondo2">
+    <!--[CREAR CUENTA]-->
+    <ImageView
+        android:id="@+id/ivCrearCuentaLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/tvCrearCuentaTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/principal"
+        android:text="@string/crear_cuenta_instruccion"
+        android:textAlignment="center"
+        android:textColor="@color/principal"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCrearCuentaLogo"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="50dp"
+        android:hint="@string/nombre"
+        android:textColorHint="@color/texto"
+        app:hintTextAppearance="@style/EditTextCustomLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCrearCuentaTitulo">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/principal"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/texto"
+            android:textSize="14sp"
+            android:theme="@style/EditTextCustomContent"
+            android:textStyle="bold"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:hint="@string/correo"
+        android:textColorHint="@color/texto"
+        app:hintTextAppearance="@style/EditTextCustomLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/principal"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/texto"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/EditTextCustomContent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:hint="@string/contrasena_nueva"
+        android:textColorHint="@color/texto"
+        app:hintTextAppearance="@style/EditTextCustomLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCorreo"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/texto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/principal"
+            android:inputType="textPassword"
+            android:textColor="@color/texto"
+            android:textSize="14sp"
+            android:theme="@style/EditTextCustomContent"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Horizontal LinearLayout [Contenedor de Fecha y Sexo]-->
+    <LinearLayout
+        android:id="@+id/llcontentFechaSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="574dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContrasena" >
+        <!--Vertical LinearLayout [Fecha]-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:paddingHorizontal="10dp"
+            android:orientation="vertical">
+            <!--TextView-->
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fecha_nacimiento"
+                android:textAlignment="center"
+                android:textColor="@color/texto"
+                android:fontFamily="@font/principal"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+            <!--Button-->
+            <Button
+                android:id="@+id/btnDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4dp"
+                android:background="@drawable/ic_btn_con_bordes_gris"
+                android:text="@string/seleccionar"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/principal"
+                android:textColor="@color/texto"/>
+        </LinearLayout>
+        <!--FinVertical LinearLayout [Fecha]-->
+
+        <!--Vertical LinearLayout [Sexo]-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:paddingHorizontal="10dp"
+            android:orientation="vertical">
+            <!--TextView-->
+            <TextView
+                android:id="@+id/tvSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sexo"
+                android:textAlignment="center"
+                android:textColor="@color/texto"
+                android:fontFamily="@font/principal"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+            <!--Button-->
+            <Button
+                android:id="@+id/btnSexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/ic_btn_con_bordes_gris"
+                android:text="@string/seleccionar"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/principal"
+                android:textColor="@color/texto"/>
+        </LinearLayout>
+        <!--Fin Vertical LinearLayout [Sexo]-->
+
+    </LinearLayout>
+    <!--Fin Horizontal LinearLayout [Contenedor de Fecha y Sexo]-->
+
+    <Button
+        android:id="@+id/btnCrearCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/ic_btn_con_bordes"
+        android:fontFamily="@font/principal"
+        android:text="@string/crear_cuenta"
+        android:textColor="@color/fondo2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llcontentFechaSexo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

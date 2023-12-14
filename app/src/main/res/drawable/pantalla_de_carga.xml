@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/fondo2"/>
+    <item>
+        <bitmap android:src="@mipmap/ic_launcher_pantalla_de_carga"
+            android:gravity="center"
+            android:scaleX="2"
+            android:scaleY="2"/>
+
+    </item>
+</layer-list>

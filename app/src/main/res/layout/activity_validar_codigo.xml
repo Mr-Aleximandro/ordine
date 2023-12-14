@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.widgets.ValidarCodigoActivity"
+    android:background="@color/fondo2">
+    <!--[VALIDAR CÓDIGO-->
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="25dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/principal"
+        android:text="@string/validar_codigo_mensaje0"
+        android:textAlignment="center"
+        android:textColor="@color/texto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="25dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/principal"
+        android:text="@string/validar_codigo_mensaje1"
+        android:textAlignment="center"
+        android:textColor="@color/texto"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tvSubtitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/principal"
+        android:text="@string/validar_codigo_mensaje2"
+        android:textAlignment="center"
+        android:textColor="@color/texto"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo" />
+
+    <!--Horizontal LinearLayout [Contenedor de Fecha y Sexo]-->
+    <LinearLayout
+        android:id="@+id/llContentCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitulo2"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/etCodigo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="2"
+            android:fontFamily="@font/principal"
+            android:inputType="number"
+            android:textColor="@color/texto"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:theme="@style/EditTextCustomContent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/principal"
+            style="@style/EditTextCustomLabel"
+            android:text="-"
+            android:textColor="@color/texto"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etCodigo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="3"
+            android:fontFamily="@font/principal"
+            android:inputType="number"
+            android:textColor="@color/texto"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:theme="@style/EditTextCustomContent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/principal"
+            android:text="-"
+            android:textColor="@color/texto"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etCodigo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="2"
+            android:fontFamily="@font/principal"
+            android:inputType="number"
+            android:textColor="@color/texto"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:theme="@style/EditTextCustomContent"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnValidarCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/ic_btn_con_bordes"
+        android:fontFamily="@font/principal"
+        android:text="@string/validar_codigo"
+        android:textColor="@color/fondo2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llContentCodigo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

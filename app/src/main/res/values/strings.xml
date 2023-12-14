@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Ordine</string>
+    <string name="seleccionar">Seleccionar</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="contrasena_nueva">Contraseña nueva</string>
+    <string name="fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="sexo">Sexo</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="iniciar_sesion">INICIAR SESIÓN</string>
+    <string name="crear_cuenta">CREAR CUENTA</string>
+    <string name="crear_cuenta_instruccion">Ingrese sus datos</string>
+    <string name="nombre">Nombre</string>
+    <string name="cargando">Conectando...</string>
+    <string name="codigo">Código</string>
+    <string name="validar_codigo">Verificar</string>
+    <string name="validar_codigo_mensaje0">Verifique la dirección de correo electrónico</string>
+    <string name="validar_codigo_mensaje1">Para verificar su correo, hemos enviado un código a</string>
+    <string name="validar_codigo_mensaje2">Introduzca su código</string>
+
+</resources>

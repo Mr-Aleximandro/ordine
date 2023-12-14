@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.pantallas.MainActivity"
+    android:background="@color/fondo2">
+    <!--[LOGIN]-->
+    <ImageView
+        android:id="@+id/ivLoginLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"/>
+
+    <!--<TextView
+        android:id="@+id/tvLoginTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/poiretone"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/principal"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="@string/correo"
+        android:textColorHint="@color/texto"
+        app:hintTextAppearance="@style/EditTextCustomLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLoginLogo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/principal"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/texto"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/EditTextCustomContent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:hint="@string/contrasena"
+        android:textColorHint="@color/texto"
+        app:hintTextAppearance="@style/EditTextCustomLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCorreo"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/texto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/principal"
+            android:inputType="textPassword"
+            android:textColor="@color/texto"
+            android:textSize="14sp"
+            android:theme="@style/EditTextCustomContent"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/ic_btn_con_bordes"
+        android:fontFamily="@font/principal"
+        android:text="@string/iniciar_sesion"
+        android:textColor="@color/fondo2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContrasena" />
+
+
+    <TextView
+        android:id="@+id/tvCrearCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/principal"
+        android:padding="20dp"
+        android:text="@string/crear_cuenta"
+        android:textAlignment="center"
+        android:textColor="@color/texto"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion" />
+</androidx.constraintlayout.widget.ConstraintLayout>
